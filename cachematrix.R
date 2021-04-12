@@ -1,7 +1,8 @@
-
-## Write a short comment describing this function
+## this file finds the inverse of a matrix
 
 makeCacheMatrix <- function(x = matrix()) {
+## this is where the parent function is created
+## matrix entered here should be invertible
   m <- NULL
   set <- function(y) {
     x <<- y
@@ -14,9 +15,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+
 
 cacheSolve <- function(x, ...) {
+## Return a matrix that is the inverse of 'x'
   m <- x$getInverse()
   if(!is.null(m)) {
     message("getting cached data")
@@ -26,5 +28,5 @@ cacheSolve <- function(x, ...) {
   m <- solve(mat, ...)
   x$setInverse(m)
   m    
-  ## Return a matrix that is the inverse of 'x'
+  
 }
